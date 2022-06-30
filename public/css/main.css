@@ -1,0 +1,303 @@
+body {
+    background-color: #FFFFCC;
+    margin: auto;
+    width: auto;
+    font-family: "Roboto Light", serif;
+}
+
+header {
+    background-color: #f1b214;
+    padding-top: 0.1em;
+    padding-bottom: 0.3em;
+    text-align: center;
+    border: 1px solid #888;
+    width: 100%;
+}
+
+#btn-message { /* Safari */
+    transition-duration: 0.4s;
+    padding: 15px;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 1px;
+    margin-bottom: 40px;
+}
+
+#btn-message:hover {
+    background-color: #5fec64; /* Green */
+    cursor: pointer;
+}
+
+h1 {
+    color: white;
+    font-size: 44px;
+}
+
+.content {
+    margin: 10px;
+}
+
+/* MODAL WINDOW */
+/* The Modal (background) */
+.modal {
+    box-sizing: border-box;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    padding-bottom: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    min-width: 300px;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.btn-close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.btn-close:hover,
+.btn-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #f1b214;
+    color: white;
+}
+
+.modal-body {
+    padding: 40px 16px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #f1b214;
+    color: white;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: "Roboto", serif;
+}
+
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: "Roboto", serif;
+}
+
+.form-row {
+    margin-top: 30px;
+}
+
+.form-row-buttons {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.form-row-buttons input[type=button] { /* Safari */
+    transition-duration: 0.4s;
+    padding: 10px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: 20px;
+    border-width: 1px;
+}
+
+.form-row-buttons input[type=button]:hover {
+    background-color: #5fec64;
+    cursor: pointer;
+}
+
+.form-row-buttons input[type=reset] { /* Safari */
+    transition-duration: 0.4s;
+    padding: 10px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 1px;
+}
+
+.form-row-buttons input[type=reset]:hover {
+    background-color: rgba(248, 104, 104, 0.75);
+    cursor: pointer;
+}
+
+.captcha__image {
+    width: 40%;
+    border-radius: 0.25rem;
+}
+
+.captcha__refresh {
+    margin-left: 0.5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.captcha__image-reload {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.captcha__refresh::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' class='bi bi-arrow-repeat' viewBox='0 0 16 16'%3E%3Cpath d='M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z'/%3E%3Cpath fill-rule='evenodd' d='M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z'/%3E%3C/svg%3E");
+}
+
+.captcha__group {
+    margin-top: 20px;
+}
+
+#captcha {
+    width: 20%;
+    margin-left: 10px;
+}
+
+.alert-errors {
+    padding: 20px;
+    background-color: rgba(244, 67, 54, 0.75);
+    color: white;
+    margin-bottom: 35px;
+}
+
+.closealert {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closealert:hover {
+    color: black;
+}
+
+.messages__content {
+    text-align: center;
+    display: table;
+    margin: 40px auto 40px;
+    font-size: 20px;
+}
+
+
+.messages__content h2 {
+    margin-bottom: 10px;
+}
+
+#messages__table {
+    border-spacing: 60px 30px;
+    overflow-x:auto;
+    table-layout: fixed;
+}
+
+@media screen and (max-width: 1200px) {
+
+    #messages__table tr{
+        display: block;
+    }
+    #messages__table tr{
+        margin-bottom: 30px;
+        border-radius: 10px;
+    }
+    #messages__table th, #messages__table td{
+        display: block;
+        text-align: center;
+        margin-bottom: 1px;
+    }
+}
+
+#messages__table td, #messages__table th {
+    border: 2px solid #fd9e36;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f6f9fd;
+}
+
+.message__text {
+    text-align: left;
+}
+
+.message__uname, .message__email, .message__datetime {
+    text-align: center;
+}
+
+.message__datetime, #messages__table th {
+    white-space: nowrap;
+}
+
+nav .pagination {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin: auto 35px auto auto;
+}
+
+nav .pagination li {
+    margin: 3px;
+    font-size: 25px;
+}
+
+nav .page-item {
+    padding: 10px;
+    background-color: #f6f9fd;
+    border: 2px solid #fd9e36;
+}
+
