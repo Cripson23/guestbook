@@ -26,20 +26,20 @@ PHP >= 7.3
 - Установленный Node.js
 - 
 ## СУБД
-- Должен быть установлен и настроен сервер СУБД (напр. MYSQL).
+Должен быть установлен и настроен сервер СУБД (напр. MYSQL).
 
 # Инструкция (OS Windows)
 - Запустить настроенный web-сервер (напр. Nginx/Apache);
 - Запустить настроенный сервер СУБД (напр. MySQL);
 - Последовательно выполнить команды в командой строке:
-## - Выгрузить проект с github:
-- Выполнить команды в командной строке:
+## Выгрузить проект с github:
+Выполнить команды в командной строке:
 ```
 git init .
 git add .
 git clone https://github.com/Cripson23/guestbook.git
 ```
-## - Загрузить и установить composer
+## Загрузить и установить composer
 ```
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
@@ -47,27 +47,27 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 php composer.phar install
 ```
-## - Установить зависимости (front)
+## Установить зависимости (front)
 ```
 npm init
 npm install
 ```
-## - Создать файл окружения
+## Создать файл окружения
 ```
 copy .env.example .env
 ```
-## -  Очистить конфиг и кэш, создать ключ приложения
+## Очистить конфиг и кэш, создать ключ приложения
 ```
 php artisan config:clear
 php artisan cache:clear
 php artisan key:generate
 ```
 - Настроить подключение к СУБД в конфиге (файл .env), создайте базу с именем, указанным в конфиге
-## -  Загузить в базу дамп ИЛИ выполнить миграции
+## Загузить в базу дамп ИЛИ выполнить миграции
 ```
 php artisan migrate
 ```
-## - Запустить сервер
+## Запустить сервер
 ```
 php artisan serve
 ```
